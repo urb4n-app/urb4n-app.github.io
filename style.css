@@ -1,7 +1,7 @@
 :root{color-scheme:dark;--bg:#111417;--bg2:#171b1f;--card:#1c2126;--line:#2e353b;--accent:#99de13;--accent-ink:#14200a;--text:#f2f5f7;--muted:#b4bcc3;--warm:#ff9a3d}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:radial-gradient(ellipse 70% 40% at 85% -5%,#2c3d12 0,transparent 70%),var(--bg);color:var(--text);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
+body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:var(--accent);text-underline-offset:4px}
 img{max-width:100%}
 header,main,footer{max-width:1040px;margin:auto;padding:0 24px}
@@ -81,3 +81,9 @@ footer{border-top:1px solid var(--line);padding-top:28px;padding-bottom:40px;col
 body.viewer-open{overflow:hidden}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:36px 0 28px;gap:24px}.hero-art{order:-1;justify-content:flex-start}.hero-art img{width:112px;border-radius:28px}.grid,.gallery-grid{grid-template-columns:1fr}.actions .button{width:100%}.news{flex-direction:column;gap:8px}section{padding:32px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+.stove{position:fixed;inset:0;z-index:-3;background:linear-gradient(90deg,#101314ee,#101314a0),url(stove-room.jpg) 68% center/cover no-repeat}
+.fire{position:fixed;right:0;bottom:15vh;width:45vw;height:45vh;z-index:-2;pointer-events:none;background:radial-gradient(ellipse,#ff74002e,transparent 65%);animation:flicker 2.8s ease-in-out infinite alternate}
+@keyframes flicker{0%{opacity:.3;transform:scaleY(.88)}38%{opacity:.7}62%{opacity:.45;transform:scaleY(1)}100%{opacity:.85;transform:scaleY(1.06)}}
+@media(max-width:760px){.stove{background:linear-gradient(180deg,#101314f0,#101314b8),url(stove-room.jpg) 70% center/cover no-repeat}.fire{width:80vw}}
+@media(prefers-reduced-motion:reduce){.fire{animation:none;opacity:.5}}
