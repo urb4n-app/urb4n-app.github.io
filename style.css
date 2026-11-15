@@ -27,6 +27,7 @@ p{margin:0 0 14px}
 .button:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .button.ghost{background:transparent;color:var(--text);border:1px solid #4a545c}
 .button.ghost:hover{border-color:var(--accent)}
+.button.disabled{opacity:.6;cursor:not-allowed;border-style:dashed}.button.disabled:hover{border-color:#4a545c;filter:none;transform:none}
 .button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 .fine{font-size:14px;color:var(--muted)}
 section{padding:44px 0}
