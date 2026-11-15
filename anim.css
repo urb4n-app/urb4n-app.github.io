@@ -1,0 +1,72 @@
+/* ===== Animations URB4N ===== */
+.progress{position:fixed;left:0;top:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--accent),var(--warm));z-index:50;pointer-events:none}
+.embers{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+header{position:sticky;top:0;z-index:40;background:#111417cc;backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.scrolled{box-shadow:0 10px 30px #0008}
+.brand img{transition:transform .5s cubic-bezier(.2,.9,.3,1.4)}
+.brand:hover img{transform:rotate(-8deg) scale(1.12)}
+nav a{position:relative}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--accent);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+nav a:hover::after,nav a[aria-current]::after{transform:scaleX(1)}
+
+/* Entrée du hero */
+.js .hero .eyebrow,.js .hero .lede,.js .hero .actions,.js .hero .fine{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.8,.2,1) forwards}
+.js .hero .eyebrow{animation-delay:.05s}
+.js .hero .lede{animation-delay:.55s}
+.js .hero .actions{animation-delay:.75s}
+.js .hero .fine{animation-delay:.95s}
+.word{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.word>span{display:inline-block;transform:translateY(105%);animation:wordup .8s cubic-bezier(.2,.8,.2,1) forwards}
+h1 .accent-word>span{background:linear-gradient(90deg,var(--accent),var(--warm),var(--accent));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:wordup .8s cubic-bezier(.2,.8,.2,1) forwards,sheen 5s linear 1.2s infinite}
+@keyframes rise{to{opacity:1;transform:none}}
+@keyframes wordup{to{transform:none}}
+@keyframes sheen{to{background-position:200% 0}}
+
+/* Boutons */
+.button{position:relative;overflow:hidden;isolation:isolate}
+.button::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,#ffffff66 50%,transparent 70%);transform:translateX(-120%);z-index:-1}
+.button:hover::after{transform:translateX(120%);transition:transform .7s}
+.button:hover{transform:translateY(-3px);box-shadow:0 14px 34px #99de1340}
+.button:active{transform:translateY(0) scale(.98)}
+.actions .button:first-child{animation:pulse 3.2s ease-in-out 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 #99de1300}50%{box-shadow:0 0 0 10px #99de1318}}
+
+/* Apparition au défilement */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* Cartes */
+.card{position:relative;transition:transform .3s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s}
+.grid .card:hover{transform:translateY(-6px);border-color:#99de1388;box-shadow:0 18px 40px #0006}
+.card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#99de1322,transparent 70%)}
+.card:hover::before{opacity:1}
+.card .num{transition:transform .4s cubic-bezier(.2,.9,.3,1.6),background .3s}
+.card:hover .num{transform:scale(1.2) rotate(-8deg);background:var(--accent);color:var(--accent-ink)}
+
+/* Captures */
+.screenshot-card{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s,border-color .35s;transform-style:preserve-3d}
+.screenshot-card:hover{border-color:#99de1388;box-shadow:0 24px 60px #000a}
+.phone-card:nth-child(2){margin-top:22px}
+.phone-card{animation:bob 6s ease-in-out infinite}
+.phone-card:nth-child(2){animation-delay:-2s}.phone-card:nth-child(3){animation-delay:-4s}
+@keyframes bob{50%{translate:0 -8px}}
+.zoom-label{opacity:0;transform:translateY(6px);transition:.3s}
+.gallery-open:hover .zoom-label{opacity:1;transform:none}
+
+/* Nouveautés */
+.tag{animation:tagpulse 2.4s ease-in-out infinite}
+@keyframes tagpulse{50%{background:#99de1344}}
+
+/* FAQ */
+details{transition:border-color .3s,background .3s}
+details:hover{border-color:#99de1366}
+details[open]{border-color:#99de1388}
+summary::after{transition:transform .35s}
+details[open] summary::after{transform:rotate(180deg)}
+details[open]>div{animation:faq .4s ease}
+@keyframes faq{from{opacity:0;transform:translateY(-6px)}}
+
+@media(prefers-reduced-motion:reduce){
+.js .hero .eyebrow,.js .hero .lede,.js .hero .actions,.js .hero .fine,.js .reveal{opacity:1;transform:none;animation:none;transition:none}
+.word>span{transform:none;animation:none}.phone-card,.tag,.actions .button:first-child{animation:none}.embers{display:none}
+}
