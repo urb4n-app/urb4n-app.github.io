@@ -4,7 +4,7 @@ html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--text);font:17px/1.7 system-ui,-apple-system,"Segoe UI",sans-serif}
 a{color:var(--accent);text-underline-offset:4px}
 img{max-width:100%}
-header,main,footer{max-width:1040px;margin:auto;padding:0 24px}
+header,main,footer{max-width:1360px;margin:auto;padding:0 24px}
 header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:20px;padding-bottom:20px;border-bottom:1px solid var(--line)}
 .brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px;letter-spacing:.01em;text-decoration:none;color:var(--text)}
 .brand img{width:40px;height:40px;border-radius:10px}
@@ -32,7 +32,7 @@ p{margin:0 0 14px}
 .fine{font-size:14px;color:var(--muted)}
 section{padding:44px 0}
 .alt{background:var(--bg2);border-block:1px solid var(--line);max-width:none;padding-inline:0}
-.wrap{max-width:1040px;margin:auto;padding:0 24px}
+.wrap{max-width:1360px;margin:auto;padding:0 24px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
 .card p{color:var(--muted);margin:0;font-size:16px}
@@ -123,3 +123,4 @@ body.viewer-open{overflow:hidden}
 .trust-box .actions{margin:0}
 @media(max-width:760px){.promises{grid-template-columns:1fr}.everywhere-box{grid-template-columns:1fr;padding:26px}.everywhere-art{min-height:0;margin-bottom:30px}.trust-box{padding:26px}}
 @media(prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none}}
+@media(min-width:1100px){header,main,footer{padding-left:56px;padding-right:56px}h1{font-size:clamp(56px,5.2vw,84px)}.lede{font-size:21px;max-width:36em}.grid{gap:24px}.card{padding:28px}section{padding:56px 0}.everywhere-box{padding:56px;gap:48px}.everywhere-art{min-height:380px}.phone-frame{max-width:190px}.gallery-grid{gap:24px}}
