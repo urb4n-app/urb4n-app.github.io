@@ -57,7 +57,7 @@
 <div class="calc-seg" role="group" aria-label="Combustible"><button type="button" class="on" data-fuel="charbon" aria-pressed="true">Charbon</button><button type="button" data-fuel="pellets" aria-pressed="false">Pellets</button></div>
 <div class="calc-fields">
 <label>Sacs en stock<span class="calc-val" id="v-sacs"></span><input id="c-sacs" type="range" min="0" max="40" step="1" value="7"></label>
-<label>Poids d’un sac<span class="calc-val" id="v-kg"></span><input id="c-kg" type="range" min="10" max="40" step="1" value="25"></label>
+<label>Poids d’un sac<span class="calc-val" id="v-kg"></span><input id="c-kg" type="range" min="10" max="25" step="1" value="25"></label>
 <label>Tu brûles par jour<span class="calc-val" id="v-conso"></span><input id="c-conso" type="range" min="2" max="25" step="0.5" value="9.5"></label>
 <label>Prix d’un sac<span class="calc-val" id="v-prix"></span><input id="c-prix" type="range" min="5" max="40" step="0.5" value="13"></label>
 </div>
@@ -210,7 +210,7 @@ function calc(){
  m.textContent=j<=0?"Plus de stock : il est temps d’en racheter.":j<7?"Moins d’une semaine : pense à racheter des sacs.":j<30?"Confortable pour le mois qui vient.":"Belle réserve : tu es tranquille pour longtemps.";
  $("calc-ring").setAttribute("aria-label","Autonomie : "+j+" jours");
 }
-var FUEL={charbon:{kg:[10,40,25],conso:[2,25,9.5],prix:[5,40,13],sacs:7},pellets:{kg:[10,25,15],conso:[1,15,6],prix:[3,15,7.5],sacs:20}};
+var FUEL={charbon:{kg:[10,25,25],conso:[2,25,9.5],prix:[5,40,13],sacs:7},pellets:{kg:[5,15,15],conso:[1,15,6],prix:[3,15,7.5],sacs:20}};
 function setFuel(n){var F=FUEL[n];[["kg","c-kg"],["conso","c-conso"],["prix","c-prix"]].forEach(function(p){var e=$(p[1]),v=F[p[0]];e.min=v[0];e.max=v[1];e.value=v[2]});$("c-sacs").value=F.sacs;
  document.querySelectorAll(".calc-seg button").forEach(function(b){var on=b.dataset.fuel===n;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});calc()}
 document.querySelectorAll(".calc-seg button").forEach(function(b){b.addEventListener("click",function(){setFuel(b.dataset.fuel)})});
