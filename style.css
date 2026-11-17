@@ -144,3 +144,8 @@ body.viewer-open{overflow:hidden}
 .calc-msg{margin:0;color:var(--muted);font-size:15px;min-height:1.5em}
 @media(max-width:860px){.calc-box{grid-template-columns:1fr;padding:24px}}
 @media(prefers-reduced-motion:no-preference){#ring-arc{transition:stroke-dasharray .35s ease}}
+
+.calc-seg{display:inline-flex;gap:4px;padding:4px;margin:6px 0 14px;border:1px solid #252c32;border-radius:999px;background:#171b1f}
+.calc-seg button{font:inherit;font-weight:600;color:#aab4bc;background:none;border:0;border-radius:999px;padding:8px 20px;cursor:pointer}
+.calc-seg button.on{background:#99de13;color:#111417}
+.calc-seg button:focus-visible{outline:2px solid #99de13;outline-offset:2px}
