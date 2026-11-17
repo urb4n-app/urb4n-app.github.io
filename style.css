@@ -149,3 +149,5 @@ body.viewer-open{overflow:hidden}
 .calc-seg button{font:inherit;font-weight:600;color:#aab4bc;background:none;border:0;border-radius:999px;padding:8px 20px;cursor:pointer}
 .calc-seg button.on{background:#99de13;color:#111417}
 .calc-seg button:focus-visible{outline:2px solid #99de13;outline-offset:2px}
+.calc-note{margin:14px 0 0;padding:12px 14px;border:1px solid #2b3a14;border-left:3px solid #99de13;border-radius:10px;background:#161d10;color:#c9d3da;font-size:.92rem;line-height:1.5}
+.calc-note b{color:#b9f23a}
