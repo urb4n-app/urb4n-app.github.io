@@ -124,3 +124,23 @@ body.viewer-open{overflow:hidden}
 @media(max-width:760px){.promises{grid-template-columns:1fr}.everywhere-box{grid-template-columns:1fr;padding:26px}.everywhere-art{min-height:0;margin-bottom:30px}.trust-box{padding:26px}}
 @media(prefers-reduced-motion:reduce){.card,.card:hover{transition:none;transform:none}}
 @media(min-width:1100px){header,main,footer,.wrap{padding-left:4vw;padding-right:4vw}h1{font-size:clamp(56px,5.2vw,84px)}.lede{font-size:21px;max-width:36em}.grid{gap:24px}.card{padding:28px}section{padding:56px 0}.everywhere-box{padding:56px;gap:48px}.everywhere-art{min-height:380px}.phone-frame{max-width:190px}.gallery-grid{gap:24px}}
+
+/* Calculateur d'autonomie */
+.calc-box{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;background:linear-gradient(160deg,#1b2127,#14181c);border:1px solid var(--line);border-radius:24px;padding:36px}
+.calc-intro p{color:var(--muted)}
+.calc-fields{display:grid;gap:18px;margin-top:22px}
+.calc-fields label{display:grid;grid-template-columns:1fr auto;gap:8px 12px;font-weight:600;font-size:15px}
+.calc-fields input{grid-column:1/-1;width:100%;accent-color:var(--accent);height:28px;margin:0}
+.calc-val{color:var(--accent);font-weight:800;font-variant-numeric:tabular-nums}
+.calc-out{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;background:#0f1316;border:1px solid var(--line);border-radius:20px;padding:26px 20px}
+.calc-ring{position:relative;width:220px;height:220px}
+.ring-text{position:absolute;inset:0;display:grid;place-content:center;line-height:1.05}
+.ring-text b{font-size:56px;letter-spacing:-.03em}
+.ring-text span{color:var(--muted);font-size:15px}
+.calc-facts{list-style:none;margin:0;padding:0;display:grid;gap:6px;width:100%}
+.calc-facts li{display:flex;justify-content:space-between;gap:12px;font-size:15px;border-bottom:1px solid #20272d;padding:6px 2px}
+.calc-facts span{color:var(--muted)}
+.calc-facts b{text-align:right}
+.calc-msg{margin:0;color:var(--muted);font-size:15px;min-height:1.5em}
+@media(max-width:860px){.calc-box{grid-template-columns:1fr;padding:24px}}
+@media(prefers-reduced-motion:no-preference){#ring-arc{transition:stroke-dasharray .35s ease}}
