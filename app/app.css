@@ -28,4 +28,16 @@ body[data-view="privacy"],body[data-view="users"],body[data-view="updates"]{--ac
 
 .gsi-dialog{border:1px solid #3a342c;border-radius:16px;background:#1b1713;color:#f1ece4;padding:22px;max-width:340px;width:calc(100% - 32px)}.gsi-dialog::backdrop{background:rgba(0,0,0,.6)}.gsi-dialog h2{margin:.2em 0 .4em}
 
-.stove{filter:none;background:linear-gradient(90deg,#101314ee,#101314a0),url(stove-room.png) 68% center/cover no-repeat}@media(max-width:760px){.stove{background:linear-gradient(180deg,#101314f0,#101314b8),url(stove-room.png) 68% center/cover no-repeat}}
+.scene{position:fixed;inset:0;z-index:-3;overflow:hidden;background:#0e1011}
+.scene-img{position:absolute;top:50%;transform:translateY(-50%);width:max(100vw,140vh);aspect-ratio:1484/1060;left:calc((100vw - max(100vw,140vh))*.68);background:url(stove-room.jpg) 0 0/100% 100% no-repeat}
+.glass{position:absolute;left:69.2%;top:24.5%;width:19%;height:25%;overflow:hidden;border-radius:38% 38% 3% 3%/26% 26% 3% 3%;filter:url(#heat)}
+.glass-photo{position:absolute;width:526.3%;height:400%;left:-364.2%;top:-98%;background:url(stove-room.jpg) 0 0/100% 100% no-repeat}
+.glass.gl{filter:none}.glass.gl .glass-photo{display:none}.glass-canvas{position:absolute;inset:0;width:100%;height:100%;display:block}.glass::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 95%,#ffb43c88,transparent 70%);mix-blend-mode:screen;animation:glow 1.7s ease-in-out infinite alternate}
+@keyframes glow{0%{opacity:.15}30%{opacity:.7}55%{opacity:.35}100%{opacity:.85}}
+.shade{position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,#101314ee,#101314a0)}
+.fire{position:fixed;right:0;bottom:15vh;width:45vw;height:45vh;z-index:-1;pointer-events:none;background:radial-gradient(ellipse,#ff74002e,transparent 65%);animation:flicker 2.8s ease-in-out infinite alternate}
+@keyframes flicker{0%{opacity:.3;transform:scaleY(.88)}38%{opacity:.7}62%{opacity:.45;transform:scaleY(1)}100%{opacity:.85;transform:scaleY(1.06)}}
+@media(max-width:760px){.shade{background:linear-gradient(180deg,#101314f0,#101314b8)}.fire{width:80vw}}
+@media(prefers-reduced-motion:reduce){.fire,.glass::after{animation:none}.glass{filter:none}.fire{opacity:.5}}
+.embers{position:fixed;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+@media(prefers-reduced-motion:reduce){.embers{display:none}}
