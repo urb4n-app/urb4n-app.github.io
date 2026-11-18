@@ -183,3 +183,17 @@
     }
   };
 })();
+// Mise à jour automatique : si le site a changé depuis le chargement, recharge une fois la page.
+(function () {
+  var mine = "20261118193225";
+  try {
+    fetch("version.txt?t=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
+      t = (t || "").trim();
+      if (!/^[0-9]{14}$/.test(t) || t === mine) return;
+      var key = "urb4n.reloaded"; var last = ""; try { last = sessionStorage.getItem(key) || ""; } catch (e) {}
+      if (last === t) return;
+      try { sessionStorage.setItem(key, t); } catch (e) {}
+      location.reload();
+    }).catch(function () {});
+  } catch (e) {}
+})();
