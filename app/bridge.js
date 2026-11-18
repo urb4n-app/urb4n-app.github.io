@@ -162,7 +162,11 @@
       args.device = deviceKey();
       var reply = parse(await engine.call(command, JSON.stringify(args)));
       if (command === "bug" && reply.ok && reply.bug_id) rememberBug(reply.bug_id);
-      if (command === "disconnect" && reply.ok) registryAdmin = false;
+      if (command === "disconnect" && reply.ok) {
+        registryAdmin = false;
+        store.del(cfgKey()); store.del("selectedAccount"); account = "";
+        try { google.accounts.id.disableAutoSelect(); } catch (e) {}
+      }
       return reply;
     }
     if (!account) return { ok: false, error: "Clique sur Connexion Google pour te connecter" };
