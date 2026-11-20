@@ -185,7 +185,7 @@
 })();
 // Mise à jour automatique : si le site a changé depuis le chargement, recharge une fois la page.
 (function () {
-  var mine = "20261118193225";
+  var mine = "20261120123603";
   try {
     fetch("version.txt?t=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (t) {
       t = (t || "").trim();
