@@ -1,3 +1,17 @@
+// --- Diagnostic (version de test) : dernières requêtes réseau, affichées dans le menu ☰ ---
+(function () {
+  var f = window.fetch, log = [];
+  window.fetch = function (u, o) {
+    var url = String(u && u.url || u).replace("https://urb4n.duckdns.org", ""), m = (o && o.method) || "GET", t = new Date().toLocaleTimeString("fr-BE");
+    return f.apply(this, arguments).then(function (r) { log.push(t + " " + m + " " + url.slice(0, 34) + " → " + r.status); return r; },
+      function (e) { log.push(t + " " + m + " " + url.slice(0, 34) + " → ERREUR " + (e && e.message)); throw e; });
+  };
+  setInterval(function () {
+    var el = document.getElementById("net-diag");
+    if (!el) { var c = document.querySelector(".credits"); if (!c) return; el = document.createElement("pre"); el.id = "net-diag"; el.style.cssText = "white-space:pre-wrap;font-size:11px;text-align:left;opacity:.85;margin:8px 0 0"; c.appendChild(el); }
+    el.textContent = "Diagnostic réseau\n" + (log.slice(-8).join("\n") || "aucune requête");
+  }, 1000);
+})();
 // Pont de la version web (Safari) : remplace l'application Android autour du même moteur.
 // Le moteur Go tourne en WebAssembly (engine.wasm) ; ce fichier fait ce que MainActivity fait sous Android :
 // connexion Google, comptes mémorisés, clé d'appareil du support, droits administrateur.
