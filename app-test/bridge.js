@@ -20,6 +20,8 @@
   "use strict";
   var CLIENT_ID = "1089498165864-np3qt374o6fsrv46l831rlar9e6luo0r.apps.googleusercontent.com";
   var VERSION = "1.0.0";
+  // Numéro de build pris dans l'adresse du script (bridge.js?v=…) : un nouveau moteur est rechargé tout de suite.
+  var BUILD = ((document.currentScript && document.currentScript.src.split("v=")[1]) || "0").replace(/\W/g, "");
   var store = {
     get: function (k) { try { return localStorage.getItem("urb4n." + k); } catch (e) { return null; } },
     set: function (k, v) { try { localStorage.setItem("urb4n." + k, v); } catch (e) {} },
@@ -35,7 +37,7 @@
 
   var ready = (async function () {
     var go = new Go();
-    var r = await WebAssembly.instantiateStreaming(fetch("engine.wasm"), go.importObject);
+    var r = await WebAssembly.instantiateStreaming(fetch("engine.wasm?v=" + BUILD), go.importObject);
     go.run(r.instance);
     engine = window.urb4nEngine;
     engine.setVersion(VERSION);
