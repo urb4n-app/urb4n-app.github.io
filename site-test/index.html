@@ -237,12 +237,13 @@ document.querySelectorAll(".calc input").forEach(function(e){e.addEventListener(
     box.insertBefore(mine,box.firstChild);
     links.forEach(function(a){if(a!==mine)a.classList.add("ghost")});
   });
+  function newer(x,y){if(!y)return true;x=x.split(".");y=y.split(".");for(var i=0;i<4;i++){var d=(+x[i]||0)-(+y[i]||0);if(d)return d>0}return false}
   var VER=/\b(\d+)\.\d+\.\d+(?:\.\d+)?\b/;
   fetch("https://api.github.com/repos/realseb1502/urb4n-app-updates/releases?per_page=30",{headers:{Accept:"application/vnd.github+json"}}).then(function(r){return r.ok?r.json():[]}).then(function(rs){
     var w="",a="",at="";
     rs.forEach(function(r){if(r.draft||r.prerelease&&!/^android/.test(r.tag_name))return;
-      if(!w&&/^v\d+(\.\d+){2,3}$/.test(r.tag_name))w=r.tag_name.slice(1);
-      if(!a&&/^android-v\d+(\.\d+){2,3}$/.test(r.tag_name)){a=r.tag_name.replace("android-v","");at=r.tag_name}});
+      if(/^v\d+(\.\d+){2,3}$/.test(r.tag_name)&&newer(r.tag_name.slice(1),w))w=r.tag_name.slice(1);
+      if(/^android-v\d+(\.\d+){2,3}$/.test(r.tag_name)&&newer(r.tag_name.replace("android-v",""),a)){a=r.tag_name.replace("android-v","");at=r.tag_name}});
     var wk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,list=[];
     while(n=wk.nextNode())list.push(n);
     list.forEach(function(n){if(n.parentNode&&/SCRIPT|STYLE/.test(n.parentNode.nodeName))return;
