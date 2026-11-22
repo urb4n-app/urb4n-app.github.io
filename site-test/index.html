@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="URB4N APP : suivi personnel de ton poêle à charbon et à pellets sur Windows et Android, avec sauvegarde sur ton compte URB4N.">
+<meta name="robots" content="noindex,nofollow">
+<title>URB4N APP (test) — Suivi de poêle à charbon et pellets</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="URB4N APP">
+<meta property="og:locale" content="fr_BE">
+<meta property="og:title" content="URB4N APP — Sais combien de jours il te reste de charbon ou de pellets">
+<meta property="og:description" content="Suivi de ton poêle à charbon ou à pellets : stock, autonomie, coût par jour et alerte avant la fin de la charge. Gratuit, sans pub, sur Windows et Android.">
+<meta property="og:url" content="https://urb4n-app.github.io/">
+<meta property="og:image" content="https://urb4n-app.github.io/og.jpg?v=2">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="URB4N APP : un poêle allumé et le texte « Sais combien de jours il te reste de charbon ou de pellets »">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#111417">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../anim.css">
+<link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body id="top"><svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><filter id="heat" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB"><feTurbulence type="fractalNoise" baseFrequency="0.010 0.035" numOctaves="2" seed="3" result="n"><animate attributeName="baseFrequency" dur="5s" repeatCount="indefinite" values="0.010 0.035;0.015 0.05;0.009 0.04;0.013 0.032;0.010 0.035"/></feTurbulence><feDisplacementMap in="SourceGraphic" in2="n" scale="13" xChannelSelector="R" yChannelSelector="G"/></filter></svg><div class="scene" aria-hidden="true"><div class="scene-img"><div class="glass"><div class="glass-photo"></div></div></div></div><div class="shade" aria-hidden="true"></div><div class="fire" aria-hidden="true"></div>
+<header>
+<a class="brand" href=".././"><img src="../favicon.png" alt="" width="40" height="40">URB4N APP</a>
+
+<div class="lang" role="group" aria-label="Langue"><button type="button" data-lang="fr" class="on" aria-pressed="true">FR</button><button type="button" data-lang="nl" aria-pressed="false">NL</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div>
+</header>
+<main>
+<div class="hero">
+<div>
+<p class="eyebrow">Windows, Android et iPhone · Suivi personnel</p>
+<h1>Ton poêle.<br>Sous contrôle.</h1>
+<p class="lede">Note tes rechargements de charbon ou de pellets et tes achats de sacs. URB4N APP calcule ton stock, ton autonomie et ton coût par jour. Tes données sont enregistrées sur ton compte URB4N, retrouvables sur tous tes appareils, et l’application garde ta saisie hors ligne.</p>
+<div class="actions" id="telecharger">
+<a class="button" href="https://github.com/realseb1502/urb4n-app-updates/releases/latest/download/URB4N-APP-Setup.exe">Télécharger pour Windows<small>Version 1.5.0.11 · installateur</small></a>
+<a class="button" href="https://github.com/realseb1502/urb4n-app-updates/releases/download/android-v2.4.0.8/URB4N-APP-Android-Beta.apk">Télécharger pour Android<small>Version 2.4.0.8 · fichier APK</small></a>
+<a class="button" href="../app/">Ouvrir sur iPhone (Safari)<small>Application web · sans installation</small></a>
+</div>
+<p class="fine">Application sans pub · <a href="#apercus">Voir les captures</a></p>
+<p class="fine lang-note" id="lang-note" hidden>Note: the app itself is currently available in French only. · De app zelf is momenteel enkel in het Frans beschikbaar.</p>
+</div>
+<div class="hero-art"><img src="../logo.png" width="256" height="256" alt="Logo URB4N APP : une flamme sur fond sombre"></div>
+</div>
+
+<div class="promises">
+<div class="card promise"><span class="pico stock"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span><p><b>Ton stock</b><br>toujours à jour</p></div>
+<div class="card promise"><span class="pico auto"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><p><b>Ton autonomie</b><br>en jours, avant de racheter</p></div>
+<div class="card promise"><span class="pico cost"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span><p><b>Ton coût par jour</b><br>et ton prix moyen du sac</p></div>
+</div>
+
+
+<section class="calc" id="calculateur" aria-labelledby="calc-title">
+<div class="calc-box">
+<div class="calc-intro">
+<p class="eyebrow">Essaie tout de suite</p>
+<h2 id="calc-title">Combien de jours te reste-t-il&nbsp;?</h2>
+<p>Choisis ton combustible et réponds à quatre questions : tu vois ton autonomie, ta date de panne sèche et ton coût par jour. L’application fait ce calcul toute seule, à partir de tes vrais rechargements.</p>
+<div class="calc-seg" role="group" aria-label="Combustible"><button type="button" class="on" data-fuel="charbon" aria-pressed="true">Charbon</button><button type="button" data-fuel="pellets" aria-pressed="false">Pellets</button></div>
+<div class="calc-fields">
+<label>Sacs en stock<span class="calc-val" id="v-sacs"></span><input id="c-sacs" type="range" min="0" max="40" step="1" value="7"></label>
+<label>Poids d’un sac<span class="calc-val" id="v-kg"></span><input id="c-kg" type="range" min="10" max="25" step="1" value="25"></label>
+<label>Tu brûles par jour<span class="calc-val" id="v-conso"></span><input id="c-conso" type="range" min="2" max="25" step="0.5" value="9.5"></label>
+<label>Prix d’un sac<span class="calc-val" id="v-prix"></span><input id="c-prix" type="range" min="5" max="40" step="0.5" value="13"></label>
+</div>
+</div>
+<div class="calc-out" aria-live="polite">
+<div class="calc-ring" id="calc-ring" role="img" aria-label="Autonomie">
+<svg viewBox="0 0 200 200" width="220" height="220" aria-hidden="true"><circle cx="100" cy="100" r="84" fill="none" stroke="#252c32" stroke-width="16"/><circle id="ring-arc" cx="100" cy="100" r="84" fill="none" stroke="url(#rg)" stroke-width="16" stroke-linecap="round" stroke-dasharray="0 600" transform="rotate(-90 100 100)"/><defs><linearGradient id="rg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5fa80a"/><stop offset="1" stop-color="#b9f23a"/></linearGradient></defs></svg>
+<div class="ring-text"><b id="o-jours">0</b><span id="o-unit">jours</span></div>
+</div>
+<ul class="calc-facts">
+<li><span>Panne sèche vers le</span><b id="o-date">—</b></li>
+<li><span>Coût moyen</span><b id="o-cout">—</b></li>
+<li><span>Stock</span><b id="o-stock">—</b></li>
+</ul>
+<p class="calc-msg" id="o-msg"></p>
+<p class="calc-note"><b>Dans l’application :</b> les charbons courants (anthracite IBB, Super Eco-Flam, Eurocalor, Topflam, Futurex, boulets défumés, lignite…) avec leurs calibres du 5/10 au 40/60, et les principales marques de pellets (Arden, Badger, Cleanfire, Comfo, Granulita, Pauls, Plospan, TotalEnergies, Woodies…) en 6&nbsp;mm ou 8&nbsp;mm. Ta marque n’y est pas&nbsp;? Choisis «&nbsp;Autre&nbsp;». Chaque combustible est suivi et calculé séparément.</p>
+<a class="button" href="#top">Voir ça avec mes vrais chiffres<small>Gratuit · Windows et Android</small></a>
+</div>
+</div>
+</section>
+
+<section class="everywhere" aria-labelledby="e-title">
+<div class="everywhere-box">
+<div class="everywhere-text">
+<p class="eyebrow">Sur ton PC et ton téléphone</p>
+<h2 id="e-title">Le même suivi, partout.</h2>
+<p>Reconnecte ton compte Google sur un autre appareil et retrouve tes achats, tes rechargements et tes réglages.</p>
+</div>
+<div class="everywhere-art">
+<div class="win-frame"><div class="win-bar"><i></i><i></i><i></i></div><img src="../tableau-de-bord.jpg" width="1274" height="881" alt="Tableau de bord URB4N APP sur Windows" loading="lazy" decoding="async"></div>
+<div class="phone-frame"><img src="../android-accueil.jpg" width="824" height="1720" alt="Accueil de l’application Android" loading="lazy" decoding="async"></div>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="f-title">
+<h2 id="f-title">Tout ce qu’il faut, rien de plus.</h2>
+<div class="grid">
+<div class="card"><span class="ftag t-orange">Suivre</span><h3>Chaque rechargement noté</h3><p>Enregistre dates, combustibles, calibres et quantités. Consulte l’historique et les bilans par jour ou par mois.</p></div>
+<div class="card"><span class="ftag t-blue">Adapter</span><h3>Charbon ou pellets</h3><p>Renseigne les poids vide et plein de ta charbonnière : l’application déduit le récipient et calcule les fractions versées. Pour les pellets, choisis tes sacs du ¼ de sac à 4 sacs.</p></div>
+<div class="card"><span class="ftag t-teal">Retrouver</span><h3>Sur tous tes appareils</h3><p>Reconnecte ton compte Google sur un autre appareil et retrouve ton suivi.</p></div>
+</div>
+</section>
+
+<section aria-labelledby="h-title">
+<h2 id="h-title">Comment ça marche</h2>
+<div class="grid">
+<div class="card"><span class="num">1</span><h3>Installe</h3><p>Télécharge l’application Windows ou Android et ouvre-la.</p></div>
+<div class="card"><span class="num">2</span><h3>Connecte Google</h3><p>Une inscription avec ton compte Google est requise pour accéder au suivi.</p></div>
+<div class="card"><span class="num">3</span><h3>Note tes rechargements</h3><p>Stock, autonomie et coût se mettent à jour tout seuls.</p></div>
+</div>
+</section>
+
+<section id="apercus" aria-labelledby="screenshots-title">
+<div class="gallery-heading">
+<div><p class="eyebrow">À l’intérieur de l’application</p><h2 id="screenshots-title">Un aperçu avant de te lancer.</h2></div>
+</div>
+<p class="gallery-intro">Une interface sombre et tes outils de suivi à portée de main. Clique sur une capture pour l’agrandir.</p>
+<h3 class="gallery-sub">Sur Windows</h3>
+<div class="gallery-grid">
+<figure class="screenshot-card">
+<a class="gallery-open" href="../tableau-de-bord.jpg" data-caption="Tableau de bord — stock, autonomie et consommation en un coup d’œil (données fictives).">
+<img src="../tableau-de-bord.jpg" width="1274" height="881" alt="Tableau de bord URB4N APP : 34 jours d’autonomie, 322 kg de stock, consommation moyenne et derniers rechargements." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Ton chauffage en un coup d’œil</h3><p>Stock, autonomie et consommation sur un seul écran.</p></figcaption>
+</figure>
+<figure class="screenshot-card">
+<a class="gallery-open" href="../achats-sacs.jpg" data-caption="Achats de sacs — saisis le prix d’un sac ou le montant total payé (données fictives).">
+<img src="../achats-sacs.jpg" width="1274" height="881" alt="Achats de sacs : formulaire avec nombre de sacs, prix d’un sac et montant total payé, et liste des achats." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Des achats faciles à suivre</h3><p>Prix du sac ou total payé : l’autre montant est calculé.</p></figcaption>
+</figure>
+<figure class="screenshot-card">
+<a class="gallery-open" href="../rechargement.jpg" data-caption="Rechargement — choisis le combustible, le calibre et la quantité versée (données fictives).">
+<img src="../rechargement.jpg" width="1274" height="881" alt="Formulaire de rechargement avec choix du combustible, du calibre et de la quantité versée, et la liste des derniers rechargements." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Charbon et pellets, chacun son suivi</h3><p>Combustible, calibre et quantité réellement versée.</p></figcaption>
+</figure>
+</div>
+<h3 class="gallery-sub">Sur Android</h3>
+<div class="gallery-grid phone-grid">
+<figure class="screenshot-card phone-card">
+<a class="gallery-open" href="../android-accueil.jpg" data-caption="Android — tableau de bord avec jours estimés et stock restant (données fictives).">
+<img src="../android-accueil.jpg" width="824" height="1720" alt="Tableau de bord Android : 34 jours estimés, stock de 322 kg, boutons Recharger le poêle et Ajouter des sacs." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Le tableau de bord, dans ta poche</h3><p>Autonomie, stock et boutons rapides.</p></figcaption>
+</figure>
+<figure class="screenshot-card phone-card">
+<a class="gallery-open" href="../android-rechargement.jpg" data-caption="Android — nouveau rechargement : date, combustible, calibre et quantité (données fictives).">
+<img src="../android-rechargement.jpg" width="824" height="1720" alt="Formulaire de nouveau rechargement Android avec date, combustible, calibre et quantité de charbonnière." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Un rechargement en quelques touches</h3><p>Combustible, calibre et quantité.</p></figcaption>
+</figure>
+<figure class="screenshot-card phone-card">
+<a class="gallery-open" href="../android-historique.jpg" data-caption="Android — historique des rechargements avec durée de chauffe et coût (données fictives).">
+<img src="../android-historique.jpg" width="824" height="1720" alt="Historique Android des rechargements avec quantité, durée de chauffe et coût." loading="lazy" decoding="async"><span class="zoom-label" aria-hidden="true">Agrandir ↗</span></a>
+<figcaption><h3>Historique et durée de chauffe</h3><p>Chaque rechargement, sa durée et son coût.</p></figcaption>
+</figure>
+</div>
+<p class="gallery-note">Captures avec des données fictives, réalisées avec les versions Windows 1.5.0 et Android 2.4.0.</p>
+</section>
+
+<section aria-labelledby="n-title">
+<div class="card news">
+<span class="tag">Windows 1.5 · Android 2.4</span>
+<div><h2 id="n-title" style="font-size:22px">Nouveautés</h2>
+<p>Nouveau graphique « Dernières charges » sur le tableau de bord. Recharger le poêle affiche un résumé « Ce qui va se passer » (stock et autonomie avant et après) et une alerte si la charge a duré moins longtemps que d’habitude. L’historique a des filtres par combustible, un graphique par jour et un bilan mensuel. Achats de sacs : tu saisis le total du ticket avec un aperçu. Contact support en conversation, avec un bouton « Marquer comme résolu ».</p>
+</div>
+</section>
+
+<section aria-labelledby="q-title">
+<h2 id="q-title">Questions fréquentes</h2>
+<details><summary>L’application Android est-elle prête ?</summary><div><p>Oui, c’est la version 2.4.0.8, installée par fichier APK hors Google Play (Android 8 ou plus récent, appareil 64 bits avec services Google Play). Les mises à jour se font depuis la page « Mises à jour » de l’application.</p></div></details>
+<details><summary>Pourquoi Google affiche-t-il un avertissement ?</summary><div><p>Le projet Google est en Production, mais la validation Google est encore en préparation : un avertissement et un plafond de connexions peuvent s’appliquer. Aucun compte Google n’est fourni avec l’application, et une installation vierge nécessite encore une configuration de connexion fournie par l’éditeur.</p></div></details>
+<details><summary>Pourquoi connecter Google ?</summary><div><p>Google sert uniquement à prouver qui tu es (adresse e-mail et identifiant). Ton compte URB4N est créé à la première connexion et tes données sont enregistrées sur le serveur de l’éditeur, sans accès à ton Drive.</p></div></details>
+<details><summary>Comment contacter le support ?</summary><div><p>Dans l’application, le menu « Contact support » (bouton « Créer un ticket ») envoie volontairement un titre, une description et, si tu le souhaites, une capture. Ces rapports sont conservés sur le serveur de l’éditeur. Tu retrouves ensuite la conversation dans la même page.</p></div></details>
+<details><summary>Comment mettre à jour l’application ?</summary><div><p>Les mises à jour se font directement depuis l’application. Elle te propose la nouvelle version au démarrage.</p></div></details>
+</section>
+
+<section class="trust-cta" aria-labelledby="t-title">
+<div class="trust-box">
+<div><h2 id="t-title">Tes données restent à toi.</h2>
+<p>Google sert uniquement à t’identifier. Chaque utilisateur a son propre espace privé. <a href="../confidentialite.html">Lire la confidentialité</a></p></div>
+<div class="actions">
+<a class="button" href="https://github.com/realseb1502/urb4n-app-updates/releases/latest/download/URB4N-APP-Setup.exe">Windows<small>Version 1.5.0.11</small></a>
+<a class="button" href="https://github.com/realseb1502/urb4n-app-updates/releases/download/android-v2.4.0.8/URB4N-APP-Android-Beta.apk">Android<small>Version 2.4.0.8</small></a>
+<a class="button" href="../app/">iPhone / Safari<small>Application web</small></a>
+</div>
+</div>
+</section>
+</main>
+<footer>URB4N APP · Maintenu par Sébastien · Contact : <a href="mailto:urb4n.app@outlook.be">urb4n.app@outlook.be</a>
+<br>Fait en Belgique<br>Application indépendante, sans affiliation avec Google ou un fabricant de poêles.<br><a href="../confidentialite.html">Confidentialité</a> · <a href="../conditions.html">Conditions</a></footer>
+<dialog class="capture-viewer" id="capture-viewer" aria-labelledby="capture-caption">
+<form method="dialog"><button class="capture-close" aria-label="Fermer la capture">Fermer <span aria-hidden="true">×</span></button></form>
+<img id="capture-image" alt="">
+<p id="capture-caption"></p>
+<div class="capture-navigation"><button type="button" id="capture-prev" aria-label="Capture précédente">← Précédente</button><span id="capture-position" aria-live="polite"></span><button type="button" id="capture-next" aria-label="Capture suivante">Suivante →</button></div>
+</dialog>
+<script src="../i18n.js"></script>
+<script src="../gallery.js" defer></script>
+<script src="../flame.js" defer></script><script src="../anim.js" defer></script><script>
+(function(){
+var $=function(i){return document.getElementById(i)};
+var f1=new Intl.NumberFormat("fr-BE",{maximumFractionDigits:1}),eur=new Intl.NumberFormat("fr-BE",{style:"currency",currency:"EUR"});
+function L(){return window.URB4N_I18N?window.URB4N_I18N.dyn():{day:"jour",days:"jours",per:" par jour",out:"déjà en panne",loc:"fr-BE",aria:"Autonomie : ",m0:"Plus de stock : il est temps d’en racheter.",m1:"Moins d’une semaine : pense à racheter des sacs.",m2:"Confortable pour le mois qui vient.",m3:"Belle réserve : tu es tranquille pour longtemps."}}
+function calc(){
+ var l=L(),f1=new Intl.NumberFormat(l.loc,{maximumFractionDigits:1}),eur=new Intl.NumberFormat(l.loc,{style:"currency",currency:"EUR"});
+ var sacs=+$("c-sacs").value,kg=+$("c-kg").value,conso=+$("c-conso").value,prix=+$("c-prix").value;
+ var stock=sacs*kg,jours=conso>0?stock/conso:0,j=Math.floor(jours);
+ $("v-sacs").textContent=sacs;$("v-kg").textContent=kg+" kg";$("v-conso").textContent=f1.format(conso)+" kg";$("v-prix").textContent=eur.format(prix);
+ $("o-jours").textContent=j;$("o-unit").textContent=j<=1?l.day:l.days;
+ $("o-stock").textContent=f1.format(stock)+" kg";
+ $("o-cout").textContent=kg>0?eur.format(conso*prix/kg)+l.per:"—";
+ var d=new Date();d.setDate(d.getDate()+j);
+ $("o-date").textContent=stock>0?d.toLocaleDateString(l.loc,{weekday:"long",day:"numeric",month:"long"}):l.out;
+ var arc=$("ring-arc"),len=2*Math.PI*84,r=Math.max(0,Math.min(1,jours/120));
+ arc.setAttribute("stroke-dasharray",(len*r)+" "+len);
+ $("o-msg").textContent=j<=0?l.m0:j<7?l.m1:j<30?l.m2:l.m3;
+ $("calc-ring").setAttribute("aria-label",l.aria+j+" "+(j<=1?l.day:l.days));
+}
+var FUEL={charbon:{kg:[10,25,25],conso:[2,25,9.5],prix:[5,40,13],sacs:7},pellets:{kg:[5,15,15],conso:[1,15,6],prix:[3,15,7.5],sacs:20}};
+function setFuel(n){var F=FUEL[n];[["kg","c-kg"],["conso","c-conso"],["prix","c-prix"]].forEach(function(p){var e=$(p[1]),v=F[p[0]];e.min=v[0];e.max=v[1];e.value=v[2]});$("c-sacs").value=F.sacs;
+ document.querySelectorAll(".calc-seg button").forEach(function(b){var on=b.dataset.fuel===n;b.classList.toggle("on",on);b.setAttribute("aria-pressed",on)});calc()}
+document.querySelectorAll(".calc-seg button").forEach(function(b){b.addEventListener("click",function(){setFuel(b.dataset.fuel)})});
+document.addEventListener("langchange",calc);
+document.querySelectorAll(".calc input").forEach(function(e){e.addEventListener("input",calc)});calc();
+})();
+</script>
+
+<script>
+(function(){
+  var ua=navigator.userAgent||"",plat=/iPhone|iPad|iPod/.test(ua)||(/Macintosh/.test(ua)&&navigator.maxTouchPoints>1)?"ios":/Android/.test(ua)?"android":"windows";
+  function kind(a){var h=a.getAttribute("href")||"";return /Setup\.exe/.test(h)?"windows":/\.apk/.test(h)?"android":/app\/$/.test(h)?"ios":"";}
+  document.querySelectorAll(".actions").forEach(function(box){
+    var links=[].slice.call(box.querySelectorAll("a.button")),mine=links.filter(function(a){return kind(a)===plat})[0];
+    if(!mine||links.length<2)return;
+    box.insertBefore(mine,box.firstChild);
+    links.forEach(function(a){if(a!==mine)a.classList.add("ghost")});
+  });
+  var VER=/\b(\d+)\.\d+\.\d+(?:\.\d+)?\b/;
+  fetch("https://api.github.com/repos/realseb1502/urb4n-app-updates/releases?per_page=30",{headers:{Accept:"application/vnd.github+json"}}).then(function(r){return r.ok?r.json():[]}).then(function(rs){
+    var w="",a="",at="";
+    rs.forEach(function(r){if(r.draft||r.prerelease&&!/^android/.test(r.tag_name))return;
+      if(!w&&/^v\d+(\.\d+){2,3}$/.test(r.tag_name))w=r.tag_name.slice(1);
+      if(!a&&/^android-v\d+(\.\d+){2,3}$/.test(r.tag_name)){a=r.tag_name.replace("android-v","");at=r.tag_name}});
+    var wk=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT),n,list=[];
+    while(n=wk.nextNode())list.push(n);
+    list.forEach(function(n){if(n.parentNode&&/SCRIPT|STYLE/.test(n.parentNode.nodeName))return;
+      n.nodeValue=n.nodeValue.replace(/\b([12])\.\d+\.\d+\.\d+\b/g,function(m,d){return d==="1"&&w?w:d==="2"&&a?a:m})});
+    if(at)document.querySelectorAll('a[href*="android-v"]').forEach(function(l){l.href=l.href.replace(/android-v[\d.]+/,at)});
+  }).catch(function(){});
+})();
+</script></body>
+</html>
