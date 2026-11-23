@@ -1,3 +1,12 @@
+ANDROID 2.4.0.9 — Nouveautés
+Prévision de l’hiver : sur le tableau de bord, combien de sacs il te faut d’ici la fin de l’hiver (30 avril) et pour quel budget.
+Rappel de fin de stock : une notification quand il te reste peu de jours de stock, réglable dans Paramètres.
+« Recharger comme la dernière fois » : un seul geste avec le même combustible, le même calibre et la même quantité.
+Comparaison des combustibles : dans Historique, la durée de chauffe, les kilos par jour et le coût par jour de chacun.
+Météo : indique ta ville dans Paramètres pour voir la température avec un pictogramme animé, les prochains jours et pourquoi ta consommation monte quand il gèle.
+Recharger et Achats de sacs : des boutons à la place des listes (derniers combustibles et calibres, quantité versée, poids du sac, « − » et « + » pour les sacs).
+Correction de bugs.
+
 ANDROID 2.4.0.7 — Nouveautés
 Tableau de bord : nouveau graphique « Dernières charges » avec la durée moyenne, la plus longue et la plus courte.
 Recharger le poêle : un résumé « Ce qui va se passer » (stock et autonomie avant et après) et une alerte si la charge a duré moins longtemps que d’habitude. Une date dans le futur est refusée avec un message clair.
