@@ -1,0 +1,20 @@
+ANDROID 2.4.0.7 — Nouveautés
+Tableau de bord : nouveau graphique « Dernières charges » avec la durée moyenne, la plus longue et la plus courte.
+Recharger le poêle : un résumé « Ce qui va se passer » (stock et autonomie avant et après) et une alerte si la charge a duré moins longtemps que d’habitude. Une date dans le futur est refusée avec un message clair.
+Historique et bilans : résumés en haut, filtres par combustible, graphique par jour et bilan mensuel avec la comparaison au mois précédent.
+Achats de sacs : tu saisis le total du ticket avec un aperçu du ticket, et « Mes achats » montre la variation du prix par sac.
+Contact support : présentation en conversation (« Nouvelle conversation ») et tu peux marquer ton ticket comme résolu. Les messages s’actualisent plus vite.
+Administration : onglets À traiter et Résolus avec la pastille rouge des nouveaux tickets ; le bouton Administration réapparaît correctement au démarrage.
+Correction de bugs.
+
+ANDROID 2.4.0.4 — Corrections
+Correction de bugs.
+
+ANDROID 2.4.0.3 — Corrections
+Correction de bugs.
+
+ANDROID 2.4.0 — Nouveautés
+Nouvel anneau d’autonomie à deux cercles : le stock restant et l’avancement de la charge en cours.
+Alerte « Vérifie le poêle » : l’application apprend de tes charges et te prévient à 90 % de la durée attendue, par une notification Windows ou Android.
+Tu peux corriger ou supprimer un rechargement ou un achat directement dans leurs pages.
+Sous Windows : courbes en barres avec la prévision du stock jusqu’à zéro, et l’application reste près de l’horloge quand tu fermes la fenêtre.
