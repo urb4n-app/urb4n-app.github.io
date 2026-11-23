@@ -1,3 +1,10 @@
+ANDROID 2.4.0.10 — Nouveautés
+Recharger : tu choisis d’abord Charbonnière ou Sac, puis la quantité versée (pleine, ¾, ½ ou ¼) avec les kilos correspondants. Le poids du sac se règle dans Paramètres.
+Prévision de l’hiver : la fin de saison passe au 19 mars.
+Historique, onglet Combustibles : la comparaison des combustibles et la météo sont au même endroit sur Android et Windows.
+Tableau de bord : le bouton « Recharger comme la dernière fois » est retiré.
+Correction de bugs.
+
 ANDROID 2.4.0.9 — Nouveautés
 Prévision de l’hiver : sur le tableau de bord, combien de sacs il te faut d’ici la fin de l’hiver (30 avril) et pour quel budget.
 Rappel de fin de stock : une notification quand il te reste peu de jours de stock, réglable dans Paramètres.
